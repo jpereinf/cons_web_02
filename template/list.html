@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet">
+    <title></title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12" >
+            <div class="panel panel-default" style="margin-top: 20px;">
+                <div class="panel-body">
+                    <span class="h3"><i class="glyphicon glyphicon-user"></i> Lista de Post</span>
+                    <a class="btn btn-danger pull-right" href="{{ app.url_generator.generate('create')}}"> <i class="glyphicon glyphicon-plus"></i> Novo Post </a>
+
+                </div>
+
+
+            </div>
+
+            <div id="list" class="row">
+
+                <div class="table-responsive col-md-12">
+                    <table class="table table-striped" cellspacing="0" cellpadding="0">
+                        <thead>
+                        <tr >
+                            <th>Autor</th>
+                            <th>Título</th>
+                            <th>Conteúdo</th>
+                            <th class="actions"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        {% for blog in lista %}
+                        <tr>
+                            <td>{{blog.AUTOR}}</td>
+                            <td>{{blog.TITULO}}</td>
+                            <td>{{blog.CONTEUDO}}</td>
+                            <td class="actions">
+                                <a class="btn btn-primary btn-xs pull-right" href="./remove/{{blog.ID}}" style="margin-left: 5px;"><i class="glyphicon glyphicon-trash"></i></a>
+                                <a class="btn btn-primary btn-xs pull-right" href="./edit/{{blog.ID}}"><i class="glyphicon glyphicon-pencil"></i></a>
+
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        {% if lista|length == 0%}
+                        <tr>
+                            <td colspan="5" align="center">
+                                <h2>Nenhum registro encontrado</h2>
+                            </td>
+                        </tr>
+                        {% endif %}
+
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div> <!-- /#list -->
+        </div>
+
+
+    </div>
+
+</div>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

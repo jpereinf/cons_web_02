@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet">
+    <script src="../bootstrap/js/validator.min.js"></script>
+    <title></title>
+</head>
+<body>
+<div class="container">
+    <form class="row" data-toggle="validator" action="./insert" method="post">
+        <div class="col-xs-12" >
+            <div class="panel panel-default" style="margin-top: 20px;">
+                <div class="panel-body">
+                    <span class="h3"><i class="glyphicon glyphicon-user"></i> Novo Contato</span>
+                    <button class="btn btn-success pull-right" type="submit"> <i class="glyphicon glyphicon-check"></i> Salvar </button>
+                    <a class="btn btn-default pull-right" href="{{ app.url_generator.generate('list')}}" style="margin-right: 10px;"> Cancelar</a>
+
+                  <!--  <a class="btn btn-danger pull-right" href="{{ app.url_generator.generate('create')}}"> <i class="glyphicon glyphicon-plus"></i> Novo Contato </a>
+                    -->
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="form-group col-sm-12">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do contato">
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Email do contato">
+                        </div>
+                     </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="fixo">Fixo</label>
+                            <input type="text" class="form-control" name="fixo" id="fixo">
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label for="celular">Celular</label>
+                            <input type="text" class="form-control" id="celular" name="celular">
+                        </div>
+                    </div>
+                    <!--<form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="nome" class="col-sm-2 control-label">Nome</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="nome" placeholder="email" >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-sm-2 control-label">email</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="email" placeholder="email">
+                            </div>
+                        </div>
+                                            </form>
+
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label for="fixo">Fixo</label>
+                            <input type="text" class="form-control" id="fixo" >
+                        </div>
+                        <div class="form-group">
+                            <label for="celular">Celular</label>
+                            <input type="email" class="form-control" id="celular" ">
+                        </div>
+                        <button type="submit" class="btn btn-default">Send invitation</button>
+                    </form> -->
+                </div>
+                </div>
+            </div>
+
+
+        </form>
+
+    </div>
+
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

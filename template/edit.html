@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet">
+    <script src="../bootstrap/js/validator.min.js"></script>
+    <title></title>
+</head>
+<body>
+<div class="container">
+    <form class="row" data-toggle="validator" action="../update" method="post">
+        <div class="col-xs-12" >
+            <div class="panel panel-default" style="margin-top: 20px;">
+                <div class="panel-body">
+                    <span class="h3"><i class="glyphicon glyphicon-user"></i> Editando Post</span>
+                    <button class="btn btn-success pull-right" type="submit"> <i class="glyphicon glyphicon-check"></i> Salvar </button>
+                    <a class="btn btn-default pull-right" href="{{app.url_generator.generate('list')}}"  style="margin-right: 10px;"> Cancelar</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="form-group col-sm-12">
+                            <label for="autor">Autor</label>
+                            <input type="hidden" name="id" value="{{blog.id}}">
+                            <input type="text" class="form-control" id="autor" name="autor" value="{{blog.autor}}" required placeholder="Nome do Autor">
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <label for="titulo">TÍTULO</label>
+                            <input class="form-control" id="titulo" name="titulo" value="{{blog.titulo}}" placeholder="Título do Post" type="email" data-error="Por favor, informe um e-mail correto." required>
+                            <div class="help-block with-errors"></div>
+
+
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <label for="conteudo">CONTEÚDO</label>
+                            <input class="form-control" id="conteudo" name="conteudo" value="{{blog.titulo}}" placeholder="Título do Post" type="email" data-error="Por favor, informe um e-mail correto." required>
+                            <div class="help-block with-errors"></div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </form>
+
+</div>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
